@@ -1,0 +1,57 @@
+{
+    // Siehe https://go.microsoft.com/fwlink/?LinkId=733558
+    // für die Dokumentation über das tasks.json-Format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "msbuild",
+            "args": [
+                "/property:GenerateFullPaths=true",
+                "/t:build",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: Erstellen",
+            "command": "build",
+            "targets": [
+                "[n. v. – Kit auswählen]"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "CMake-Vorlage Erstellen Aufgabe"
+        },
+        {
+            "label": "Compile LaTeX",
+            "type": "shell",
+            "command": "pdflatex",
+            "args": [
+                "-interaction=nonstopmode",
+                "<name der main-Datei>.tex"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$latex"]
+        },
+        {
+            "label": "Make Glossaries",
+            "type": "shell",
+            "command": "makeglossaries",
+            "args": [
+                "${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "dependsOn": "Compile LaTeX"
+        }
+    ]
+}

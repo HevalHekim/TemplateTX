@@ -1,0 +1,27 @@
+\section{Vergleich von Playwright und Selenium für End-to-End-Tests}
+
+Für die Wahl eines geeigneten Frameworks zum End-to-End-Testen der React-Applikation wurden Playwright und Selenium anhand relevanter Kriterien verglichen. Die Ergebnisse werden im Folgenden dargestellt.
+
+\subsection{Installation und Einrichtung}
+Playwright bietet eine einfache Installation und Konfiguration. Es integriert standardmäßig viele Funktionen wie Browser-Management und Debugging-Tools (z. B. Screenshots und Videoaufnahmen). Besonders hervorzuheben ist die nahtlose Unterstützung von TypeScript und modernen Frameworks wie React. Selenium hingegen erfordert eine manuelle Konfiguration von WebDriver und Browser-Treibern, was zusätzlichen Aufwand verursacht \cite{playwright_docs}.
+
+\subsection{Unterstützung für moderne Webtechnologien}
+Playwright wurde speziell für moderne Webanwendungen entwickelt. Es unterstützt React durch automatische Wartezeiten (\textit{Auto-Waiting}), die DOM-Änderungen effizient erkennen. Selenium bietet zwar ebenfalls Unterstützung für moderne Technologien, erfordert jedoch oft explizite Wartebedingungen, was zu mehr Boilerplate-Code führt \cite{selenium_docs}.
+
+\subsection{TypeScript-Unterstützung}
+Playwright bietet eine native Unterstützung für TypeScript, was die Entwicklung von Tests und die Wartung des Codes erleichtert. Selenium hingegen benötigt zusätzliche Bibliotheken wie \texttt{selenium-webdriver}, um TypeScript zu integrieren. Dies führt zu zusätzlichem Konfigurationsaufwand \cite{playwright_docs, selenium_ts}.
+
+\subsection{Testgeschwindigkeit und Performance}
+Durch die direkte Kommunikation mit den Browsern (Chromium, Firefox, WebKit) ist Playwright in der Regel schneller als Selenium, welches auf WebDriver setzt. Dieser zusätzliche Kommunikationslayer verlangsamt die Testausführung \cite{playwright_performance}.
+
+\subsection{Cross-Browser-Testing}
+Playwright unterstützt nativ moderne Browser wie Chromium, Firefox und WebKit. Selenium bietet eine größere Auswahl, darunter auch ältere Browser, was jedoch für moderne Anwendungen wie React-Applikationen oft irrelevant ist \cite{playwright_docs, selenium_docs}.
+
+\subsection{Community und Support}
+Selenium hat aufgrund seiner langen Historie eine größere Community und umfassende Dokumentation. Playwright hingegen wird aktiv von Microsoft entwickelt und bietet eine wachsende Community sowie umfangreiche Dokumentationen, die speziell auf moderne Anwendungen zugeschnitten sind \cite{playwright_docs, selenium_docs}.
+
+\subsection{End-to-End-Test-Features}
+Playwright bietet viele Funktionen wie automatisches Handling von Frames und Popups, parallele Tests und integrierte Debugging-Tools. Selenium bietet ähnliche Features, jedoch oft mit zusätzlicher Konfiguration \cite{playwright_docs}.
+
+\subsection{Fazit}
+Für eine kleinere React-Applikation mit TypeScript und dem Fokus auf End-to-End-Tests ist Playwright die bessere Wahl. Die Hauptgründe sind die einfache Einrichtung, die native TypeScript-Unterstützung, die höhere Testgeschwindigkeit und die modernen Funktionen für End-to-End-Tests. Selenium ist zwar vielseitig und flexibel, führt jedoch zu Mehraufwand, der für kleinere Projekte nicht gerechtfertigt ist.
