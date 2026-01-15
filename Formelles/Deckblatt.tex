@@ -1,19 +1,19 @@
 % Keine Nummerierung auf Deckblatt 
-
+\thispagestyle{empty}
 
 % Beginn Deckblatt
 \begin{center}
-    \begin{tabular}{{\textwidth}}
-        \centering
-           \begin{minipage}{0.5\textwidth}
+    \begin{tabular}{p{\textwidth}}
+    \centering
+    \begin{minipage}{0.5\textwidth}
         \centering
         \includegraphics[width=0.5\textwidth]{Bilder/DHBW-Logo.png}
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
         \centering
         \includegraphics[width=0.5\textwidth]{Bilder/homag-group.png}
-    \end{minipage}
-    \vspace{1,5cm}
+    \end{minipage}\\[1,5cm]
+    %\vspace{1,5cm}
     \begin{center}
         \LARGE{\textsc{Titel}}\\[1,5cm]
     \end{center}
@@ -23,12 +23,16 @@
     \end{center}
 
     \begin{center}
+        \textbf{\Large{<Kind of paper>\\[1,5 cm]}}
+    \end{center}
+
+    \begin{center}
         vorgelegt von\\[1,5cm]
     \end{center}
 
     \begin{center}
         \large{\textbf{Name}} \\
-    \small{geboren am TT.MM.YYYY\\[1,5cm]}
+        \small{geboren am TT.MM.YYYY\\[1,5cm]}
     \end{center}
 
     \begin{center}

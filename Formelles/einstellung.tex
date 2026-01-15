@@ -1,9 +1,9 @@
+%settings
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{babel}
 \usepackage[babel, german=quotes]{csquotes}
 \usepackage[style = alphabetic]{biblatex}
-\addbibresource{literatur.bib}
 \usepackage{graphicx, subcaption}	
 \usepackage{xcolor}
 \usepackage[printonlyused]{acronym}
@@ -11,14 +11,14 @@
 \usepackage{listings}
 \usepackage{tabularray}
 \usepackage{rotating}
-\usepackage{listings}
 \usepackage{tikz}
 \usepackage{glossaries}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{hyperref}
-\makeglossaries
 
+%\pgfplotsset{compat=1.18}
+\makeglossaries
 
 \UseTblrLibrary{booktabs}
 \DefTblrTemplate{contfoot-text}{default}{Fortgesetzt auf der folgenden Seite}
@@ -26,5 +26,6 @@
 
 %ggf Zitierstil ändern, aber laut DHBW Doku so richtig
 \pagestyle{headings}
+\addbibresource{literatur.bib}
 \addtocounter{tocdepth}{1}
 \linespread{1.25}
